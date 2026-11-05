@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Ranvier (Mielina)",
+  "short_name": "Ranvier",
+  "version": "LO_PONE_LA_COMPILACION",
+  "description": "Saca la referencia de la página que lees y la manda a tu biblioteca de Mielina. Usa los traductores de Zotero.",
+  "homepage_url": "https://github.com/marioesperanzasorto-ops/ranvier",
+  "minimum_chrome_version": "120",
+  "icons": {
+    "16": "iconos/ranvier-16.png",
+    "32": "iconos/ranvier-32.png",
+    "48": "iconos/ranvier-48.png",
+    "128": "iconos/ranvier-128.png"
+  },
+  "action": {
+    "default_title": "Mandar la referencia de esta página a Mielina",
+    "default_popup": "ventana/ventana.html",
+    "default_icon": {
+      "16": "iconos/ranvier-16.png",
+      "32": "iconos/ranvier-32.png"
+    }
+  },
+  "permissions": ["activeTab", "scripting", "offscreen", "storage"],
+  "host_permissions": ["https://mielinapp.com/*"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "fondo/servicio.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mielinapp.com/biblioteca*"],
+      "js": ["comun/contrato.js", "contenido/puenteMielina.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "sandbox": {
+    "pages": ["traductor/traductor.html"]
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'",
+    "sandbox": "sandbox allow-scripts; default-src 'none'; script-src 'self' 'unsafe-eval'; form-action 'none'"
+  }
+}

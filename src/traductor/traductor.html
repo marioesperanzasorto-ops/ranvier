@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+	Ranvier (Mielina). Copyright © 2026 Mario Esperanza. Licencia GNU AGPL 3.0 o posterior (LICENSE).
+	MODIFICADO el 04-11-2026: se basa en `src/browserExt/translateHost/translateHost.html` de zotero/zotero-connectors
+	(commit e942336), Copyright © 2024 Corporation for Digital Scholarship, con la licencia GNU AGPL 3.0 o posterior.
+	Cambios: los archivos de la arquitectura de traducción vienen de zotero/translate y zotero/utilities sin los del
+	conector (sin repositorio, proxies ni guardado en Zotero), y los de Ranvier.
+
+	El marco aislado (sandbox) donde corren los traductores de Zotero. Su CSP (en el manifiesto) es
+	`default-src 'none'; script-src 'self' 'unsafe-eval'`: el código de los traductores se evalúa aquí y no puede salir
+	a la red; sus peticiones pasan por el canal (`entorno.js`).
+-->
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ranvier: traductor</title>
+</head>
+<body>
+<script src="../zotero/translate/zotero.js"></script>
+<script src="../zotero/translate/promise.js"></script>
+<script src="../zotero/utilities/openurl.js"></script>
+<script src="../zotero/utilities/date.js"></script>
+<script src="../zotero/utilities/xregexp-all.js"></script>
+<script src="../zotero/utilities/xregexp-unicode-zotero.js"></script>
+<script src="../zotero/utilities/utilities.js"></script>
+<script src="../zotero/utilities/utilities_item.js"></script>
+<script src="../zotero/utilities/schema.js"></script>
+<script src="../zotero/utilities/resource/zoteroTypeSchemaData.js"></script>
+<script src="../zotero/utilities/cachedTypes.js"></script>
+<script src="../zotero/translate/utilities_translate.js"></script>
+<script src="../zotero/translate/debug.js"></script>
+<script src="../zotero/translate/http.js"></script>
+<script src="../zotero/translate/translator.js"></script>
+<script src="../zotero/translate/translators.js"></script>
+<script src="../zotero/translate/translation/translate.js"></script>
+<script src="../zotero/translate/translation/sandboxManager.js"></script>
+<script src="../zotero/translate/translation/translate_item.js"></script>
+<script src="../zotero/translate/tlds.js"></script>
+<script src="../zotero/translate/proxy.js"></script>
+<script src="../zotero/translate/rdf/init.js"></script>
+<script src="../zotero/translate/rdf/uri.js"></script>
+<script src="../zotero/translate/rdf/term.js"></script>
+<script src="../zotero/translate/rdf/identity.js"></script>
+<script src="../zotero/translate/rdf/n3parser.js"></script>
+<script src="../zotero/translate/rdf/rdfparser.js"></script>
+<script src="../zotero/translate/rdf/serialize.js"></script>
+<script src="../datos/esquemaDeZotero.js"></script>
+<script src="../datos/formatosDeFecha.js"></script>
+<script src="../comun/canal.js"></script>
+<script src="../comun/cslJson.js"></script>
+<script src="./entorno.js"></script>
+<script src="./translateWeb.js"></script>
+<script src="./anfitrion.js"></script>
+</body>
+</html>

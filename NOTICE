@@ -1,0 +1,63 @@
+Ranvier (Mielina)
+Copyright © 2026 Mario Esperanza
+https://github.com/marioesperanzasorto-ops/ranvier
+
+Ranvier es software libre: puedes redistribuirlo o modificarlo con la licencia GNU Affero General Public License,
+versión 3 o (a tu elección) cualquier versión posterior, publicada por la Free Software Foundation (archivo LICENSE).
+Se distribuye SIN NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o de IDONEIDAD PARA UN
+PROPÓSITO PARTICULAR.
+
+El código fuente completo de cada versión está en el repositorio de arriba (con sus submódulos).
+
+Ranvier no es un producto de Zotero ni de la Corporation for Digital Scholarship, y no está respaldado por ellos.
+«Zotero» es una marca registrada de la Corporation for Digital Scholarship.
+
+------------------------------------------------------------------------------------------------------------------------
+Código de terceros
+------------------------------------------------------------------------------------------------------------------------
+
+Ranvier usa los traductores de Zotero y su arquitectura de traducción. Todo ese código tiene la licencia GNU AGPL 3.0
+o posterior (o la que diga la cabecera de cada archivo), y va sin cambios, en commits fijos:
+
+- zotero/translate (la arquitectura de traducción), en vendor/translate y, en el paquete, en zotero/translate/.
+  Copyright © 2006-2026 Center for History and New Media, George Mason University, y Corporation for Digital
+  Scholarship. https://github.com/zotero/translate
+
+- zotero/utilities (utilidades y la conversión a CSL-JSON), en vendor/utilities y, en el paquete, en
+  zotero/utilities/. Copyright © 2009-2026 Center for History and New Media, George Mason University, y Corporation
+  for Digital Scholarship. https://github.com/zotero/utilities
+  Incluye XRegExp (Copyright © Steven Levithan, licencia MIT), con su aviso en el mismo archivo.
+
+- zotero/translators (los traductores), en vendor/translators y, en el paquete, en traductores/ (cada uno con el
+  nombre de su identificador; el índice traductores/indice.json dice el archivo original de cada uno). Cada
+  traductor lleva en su cabecera sus autores y su licencia. https://github.com/zotero/translators
+
+- zotero/zotero-schema (el esquema de los tipos y campos), en vendor/zotero-schema. Ranvier toma de schema.json las
+  equivalencias con CSL (en el paquete, datos/esquemaDeZotero.js). https://github.com/zotero/zotero-schema
+
+Archivos de Ranvier que se basan en código de zotero/zotero-connectors (https://github.com/zotero/zotero-connectors,
+commit e942336, licencia GNU AGPL 3.0 o posterior, Copyright © 2021-2026 Center for History and New Media y
+Corporation for Digital Scholarship). Cada uno dice en su cabecera que se modificó, cuándo y qué cambió:
+
+- src/traductor/translateWeb.js: copia sin cambios de src/common/translateWeb.js.
+- src/traductor/anfitrion.js: de src/browserExt/translateHost/translateHost.js (modificado el 04-11-2026).
+- src/traductor/traductor.html: de src/browserExt/translateHost/translateHost.html (modificado el 04-11-2026).
+- src/traductor/entorno.js: de src/common/http.js y src/common/inject/http.js, y de example/translators.js y
+  example/translate_item.js de zotero/translate (modificado el 04-11-2026).
+- src/fueraDePantalla/fueraDePantalla.js: de src/browserExt/offscreen/offscreen.js y
+  src/browserExt/translateHost/translateHostFrameManager.js (modificado el 04-11-2026).
+- src/fueraDePantalla/fueraDePantalla.html: de src/browserExt/offscreen/offscreen.html (modificado el 04-11-2026).
+- src/contenido/leerPagina.js: de src/browserExt/inject/remoteTranslate.js (modificado el 04-11-2026).
+
+Del conector de Zotero se quitó todo lo que no sirve para leer una referencia y pasarla a CSL-JSON: guardar en Zotero
+(la aplicación y la API, con OAuth), Google Docs, los proxies, SingleFile y las capturas, los adjuntos y los PDF, las
+preferencias, las actualizaciones de traductores desde repo.zotero.org y los nombres y logotipos de Zotero en la
+interfaz.
+
+El resto del código de Ranvier es propio, con la misma licencia.
+
+------------------------------------------------------------------------------------------------------------------------
+Herramientas de desarrollo (no van en el paquete)
+------------------------------------------------------------------------------------------------------------------------
+
+- Puppeteer (Apache 2.0), para las pruebas de punta a punta y para pasar el ícono a PNG.

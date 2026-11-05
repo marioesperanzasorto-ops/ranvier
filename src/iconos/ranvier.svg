@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Ranvier (Mielina). Copyright © 2026 Mario Esperanza. Licencia GNU AGPL 3.0 o posterior.
+       Un axón (la tinta clara) con dos vainas de mielina (la miel) y, entre ellas, el nodo de Ranvier. -->
+  <rect width="128" height="128" rx="14" fill="#15120E"/>
+  <rect x="4" y="59" width="120" height="10" fill="#EDE6DA"/>
+  <rect x="8" y="43" width="48" height="42" rx="21" fill="#F0BC5E"/>
+  <rect x="72" y="43" width="48" height="42" rx="21" fill="#F0BC5E"/>
+  <circle cx="64" cy="64" r="9" fill="#EDE6DA"/>
+</svg>

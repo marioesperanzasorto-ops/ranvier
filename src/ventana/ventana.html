@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+	Ranvier (Mielina). Copyright © 2026 Mario Esperanza. Licencia GNU AGPL 3.0 o posterior (LICENSE).
+	La ventana del botón: lo que el estudiante ve al hacer clic en Ranvier.
+-->
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="color-scheme" content="dark light">
+	<title>Ranvier</title>
+	<link rel="stylesheet" href="ventana.css">
+</head>
+<body>
+<header class="cabecera">
+	<img src="../iconos/ranvier-32.png" alt="" width="20" height="20">
+	<span class="marca">Ranvier</span>
+	<span class="para">para Mielina</span>
+</header>
+
+<main id="contenido" aria-live="polite">
+	<section id="estado" class="panel">
+		<div class="progreso" aria-hidden="true"><span></span></div>
+		<p id="estado-texto">Leyendo la página…</p>
+	</section>
+
+	<section id="elegir" class="panel" hidden>
+		<h1>Esta página tiene una lista</h1>
+		<p class="ayuda">Elige las referencias que quieres mandar a Mielina.</p>
+		<div class="acciones-de-lista">
+			<label class="todas"><input type="checkbox" id="marcar-todas"> Marcar todas</label>
+			<span id="cuenta" class="cuenta"></span>
+		</div>
+		<ul id="opciones" class="opciones"></ul>
+		<p id="limite" class="nota" hidden></p>
+		<div class="botones">
+			<button type="button" id="cancelar" class="secundario">Cancelar</button>
+			<button type="button" id="mandar" class="primario" disabled>Mandar a Mielina</button>
+		</div>
+	</section>
+
+	<section id="listo" class="panel" hidden>
+		<h1 id="listo-titulo">Listo</h1>
+		<p id="listo-texto"></p>
+	</section>
+
+	<section id="error" class="panel" hidden>
+		<h1 id="error-titulo"></h1>
+		<p id="error-texto"></p>
+		<p id="error-nota" class="nota" hidden></p>
+		<div class="botones" id="error-botones" hidden>
+			<button type="button" id="mandar-igual" class="secundario" hidden>Mandar lo que encontré</button>
+			<button type="button" id="dar-permiso" class="primario" hidden>Dar permiso</button>
+			<button type="button" id="reintentar" class="primario" hidden>Intentar de nuevo</button>
+		</div>
+	</section>
+</main>
+
+<footer class="pie">
+	<a id="codigo" href="#" target="_blank" rel="noopener">Código fuente y licencia</a>
+</footer>
+<script type="module" src="ventana.js"></script>
+</body>
+</html>

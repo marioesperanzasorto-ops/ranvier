@@ -1,0 +1,30 @@
+{
+  "name": "ranvier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ranvier (Mielina): saca la referencia de la página que lees y la manda a tu biblioteca de Mielina. Usa los traductores de Zotero.",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marioesperanzasorto-ops/ranvier.git"
+  },
+  "scripts": {
+    "compilar": "node scripts/compilar.mjs",
+    "compilar:desarrollo": "node scripts/compilar.mjs --desarrollo",
+    "revisar": "node scripts/revisar.mjs",
+    "test": "npm run revisar && npm run test:unidad && npm run test:e2e",
+    "test:unidad": "node --test \"pruebas/unidad/*.test.mjs\"",
+    "test:e2e": "node --test --test-concurrency=1 \"pruebas/e2e/*.test.mjs\"",
+    "paquete": "node scripts/compilar.mjs && node scripts/paquete.mjs",
+    "iconos": "node scripts/iconos.mjs",
+    "traductores:actualizar": "node scripts/actualizarTraductores.mjs",
+    "capturas": "node scripts/capturas.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "25.16.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

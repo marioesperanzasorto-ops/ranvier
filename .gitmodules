@@ -1,0 +1,12 @@
+[submodule "vendor/translate"]
+	path = vendor/translate
+	url = https://github.com/zotero/translate.git
+[submodule "vendor/utilities"]
+	path = vendor/utilities
+	url = https://github.com/zotero/utilities.git
+[submodule "vendor/zotero-schema"]
+	path = vendor/zotero-schema
+	url = https://github.com/zotero/zotero-schema.git
+[submodule "vendor/translators"]
+	path = vendor/translators
+	url = https://github.com/zotero/translators.git

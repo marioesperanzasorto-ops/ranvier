@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--
+	Ranvier (Mielina). Copyright © 2026 Mario Esperanza. Licencia GNU AGPL 3.0 o posterior (LICENSE).
+	MODIFICADO el 04-11-2026: se basa en `src/browserExt/offscreen/offscreen.html` de zotero/zotero-connectors
+	(commit e942336), Copyright © 2024 Corporation for Digital Scholarship, con la licencia GNU AGPL 3.0 o posterior.
+	Cambios: solo carga el canal de Ranvier y el administrador de marcos.
+-->
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'none'; script-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'none';">
+	<title>Ranvier: fuera de pantalla</title>
+</head>
+<body>
+<script src="../comun/canal.js"></script>
+<script src="./fueraDePantalla.js"></script>
+</body>
+</html>
