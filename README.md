@@ -45,7 +45,14 @@ historial y no lee tus cookies. Los detalles: [docs/privacidad.md](docs/privacid
 Hace falta Node.js 22 o más reciente y git.
 
 ```bash
-git clone --recursive https://github.com/marioesperanzasorto-ops/ranvier.git
+git clone https://github.com/marioesperanzasorto-ops/ranvier.git
+```
+
+Dentro de la carpeta `ranvier`, baja los submódulos de Zotero (sin `--recursive`: los submódulos de los submódulos no
+hacen falta) y las dependencias:
+
+```bash
+git submodule update --init
 ```
 
 ```bash
