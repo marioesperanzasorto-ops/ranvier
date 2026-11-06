@@ -1,21 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <!-- Ranvier (Mielina). Copyright © 2026 Mario Esperanza. Licencia GNU AGPL 3.0 o posterior.
-       El logotipo de Mielina, con su mismo diseño y sus mismos colores (del dueño, 06-11-2026): una M trazada como un
-       axón (línea fina) con vainas de mielina color miel. Entre vaina y vaina quedan los nodos de Ranvier. -->
+       Un axón con dos vainas de mielina y, entre ellas, el nodo de Ranvier. Los colores son los del logotipo de Mielina
+       (del dueño, 06-11-2026): el fondo de tinta con su borde miel, el axón en miel claro y las vainas en degradado. -->
   <defs>
     <linearGradient id="miel" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#F0BC5E"/>
       <stop offset="1" stop-color="#D08A2E"/>
     </linearGradient>
   </defs>
-  <rect x="1" y="1" width="62" height="62" rx="14" fill="#1D1914" stroke="#F0BC5E" stroke-opacity="0.28" stroke-width="2"/>
-  <path d="M16 48V17L32 36L48 17V48" fill="none" stroke="#F0BC5E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <g fill="none" stroke-width="7" stroke-linecap="round">
-    <!-- Las vainas de las patas, en el miel oscuro del degradado: una línea vertical no tiene ancho, y los navegadores
-         no pintan un degradado relativo a su caja (el de las diagonales) -->
-    <path d="M16 45V34" stroke="#D08A2E"/>
-    <path d="M48 45V34" stroke="#D08A2E"/>
-    <path d="M22.3 24.5L26.4 29.4" stroke="url(#miel)"/>
-    <path d="M41.7 24.5L37.6 29.4" stroke="url(#miel)"/>
-  </g>
+  <rect x="2" y="2" width="124" height="124" rx="14" fill="#1D1914" stroke="#F0BC5E" stroke-opacity="0.28" stroke-width="4"/>
+  <rect x="4" y="59" width="120" height="10" fill="#F0BC5E"/>
+  <rect x="8" y="43" width="48" height="42" rx="21" fill="url(#miel)"/>
+  <rect x="72" y="43" width="48" height="42" rx="21" fill="url(#miel)"/>
+  <circle cx="64" cy="64" r="9" fill="#F0BC5E"/>
 </svg>
