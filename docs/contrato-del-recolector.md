@@ -1,12 +1,16 @@
 # El contrato entre el recolector y Mielina (versión 1)
 
-> Este documento es público: se copia en el repositorio del recolector. No describe cómo Mielina escribe las referencias
+> Este documento es público: se copia en el repositorio de Ranvier. No describe cómo Mielina escribe las referencias
 > (eso es privado), solo cómo se le entregan. Los datos de los ejemplos son inventados.
 
 El **recolector** es una extensión del navegador que saca los datos de una referencia de la página que el estudiante está
 leyendo. **Mielina** es el editor que las guarda en la biblioteca del estudiante y las escribe en APA. Son dos programas
 aparte: no comparten código ni archivos. Solo se pasan datos, con mensajes estándar del navegador y en un formato
 público.
+
+El recolector de Mielina es **Ranvier (Mielina)**, con licencia GNU AGPL 3.0:
+<https://github.com/marioesperanzasorto-ops/ranvier>. Cualquier otro programa que cumpla este contrato puede mandarle
+referencias a Mielina de la misma forma.
 
 ## El formato: CSL-JSON
 
