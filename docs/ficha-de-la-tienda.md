@@ -46,6 +46,7 @@
 - Ícono: `tienda/icono-128.png` (128 × 128).
 - Capturas (1280 × 800): `tienda/captura-articulo-1280x800.png` y `tienda/captura-lista-1280x800.png`.
 - Mosaico pequeño (440 × 280): `tienda/mosaico-440x280.png`.
+- Imagen promocional de marquesina (1400 × 560, Chrome): `tienda/marquesina-1400x560.png`.
 
 ## Las prácticas de privacidad (Chrome) y las justificaciones de los permisos
 
