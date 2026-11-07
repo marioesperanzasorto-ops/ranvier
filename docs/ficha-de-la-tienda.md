@@ -88,7 +88,9 @@ usan para evaluar créditos ni préstamos.
 ### Chrome Web Store
 
 1. Crea la cuenta de desarrollador en <https://chrome.google.com/webstore/devconsole> con una cuenta de Google. Cuesta
-   US$5, una sola vez. Verifica el correo de contacto y declara que no eres comerciante (es gratis y sin anuncios).
+   US$5, una sola vez. Verifica el correo de contacto y declárate comerciante: Ranvier es gratis, pero es la extensión
+   de Mielina, que puede tener planes de pago. Como comerciante, la tienda verifica tus datos de contacto (nombre,
+   dirección, teléfono y correo) y los muestra a quienes la ven desde la Unión Europea.
 2. Corre `npm run paquete` y sube `paquete/ranvier-<versión>.zip` en «Nuevo elemento».
 3. Llena «Ficha de Play Store» con los textos y las imágenes de arriba.
 4. Llena «Prácticas de privacidad» con lo de arriba.
